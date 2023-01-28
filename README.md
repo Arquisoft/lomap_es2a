@@ -10,31 +10,38 @@
 <img src="https://miro.medium.com/max/365/1*Jr3NFSKTfQWRUyjblBSKeg.png" height="100">
 </p>
 
-
-This project is a basic example of website using **React** with **Typescript** and an endpoint using **NodeJS** with **express**.
+Este proyecto es un ejemplo básico de un sistema con un interfaz web en   **React** usando **Typescript** y un servicio con **NodeJS** y  **express**.
 
 ## Quick start guide
-<mark>In case you already have node.js and npm, make sure you update them before attempting to build the images</mark>
+<mark>Si ya tienes instalado  node.js y npm en tu ordenador, asegúrate de actualizarlos antes de contruir la imagen</mark>
 
-If you want to execute the project you will need [git](https://git-scm.com/downloads), [Node.js and npm](https://www.npmjs.com/get-npm) and [Docker](https://docs.docker.com/get-docker/). Make sure the three of them are installed in your system. Download the project with `git clone https://github.com/arquisoft/lomap_0`. The fastest way to launch everything is with docker:
+Requisitos previos para lanzar el proyecto : 
+  - Git [git](https://git-scm.com/downloads)
+  - Node [Node.js and npm](https://www.npmjs.com/get-npm) 
+  - Docker [Docker](https://docs.docker.com/get-docker/). 
+ 
+ Una vez instalados las herramientas anteriores , descárgate el proyecto con `git clone https://github.com/arquisoft/lomap_es2a`. La manera más rápida y fiable para lanzarlo es usando Docker:
+
 ```bash
 docker-compose up --build
 ```
-This will create two docker images as they don't exist in your system (the webapp and the restapi) and launch a mongo container database. It will also launch Prometheus and Grafana containers to monitor the webservice. You should be able to access everything from here:
+Esto creará dos iimagenes (si ellas no existen en tu sistema) y lanzará una base de datos mongo. En el lanzamiento también se incluye dos contenedores Prometheus y Grafana para monitorizar el servicio web. Los enlaces para acceder a los distintos servicios una vez lanzado serán: 
  - [Webapp - http://localhost:3000](http://localhost:3000)
  - [RestApi example call - http://localhost:5000/api/users/list](http://localhost:5000/api/users/list)
  - [RestApi raw metrics - http://localhost:5000/metrics](http://localhost:5000/metrics)
  - [Prometheus server - http://localhost:9090](http://localhost:9090)
  - [Grafana server http://localhost:9091](http://localhost:9091)
- 
-If you want to run it without docker. Compile and run the restapi:
+
+Para lanzarlo en local sin el uso de docker, sigue los siguientes pasos:
+1. -Compila y lanza restapi:
 ```shell
 cd restapi
 npm install
 npm start
 ```
+Comprueba que funciona con http://localhost:5000/api/users/list
 
-Now the webapp:
+2. -Compila y lanza webapp:
 
 ```shell
 cd webapp
@@ -42,16 +49,17 @@ npm install
 npm start
 ```
 
-You should be able to access the application in [http://localhost:3000](http://localhost:3000).
+Comprueba que funciona con  [http://localhost:3000](http://localhost:3000).
 
-## More information
-You can get more information about the repository in the other README files:
-- Documentation: https://github.com/arquisoft/lomap_0/tree/master/docs
-- Webapp: https://github.com/arquisoft/lomap_0/tree/master/webapp
-- Restapi: https://github.com/arquisoft/lomap_0/tree/master/restapi
+## Más  informacion
+Puedes obtener más información sobre el repositorio en los siguientes ficheros README
+- Documentacion: https://github.com/arquisoft/lomap_es2a/tree/master/docs
+- Webapp: https://github.com/arquisoft/lomap_es2a/tree/master/webapp
+- Restapi: https://github.com/arquisoft/lomap_es2a/tree/master/restapi
 
 
-## Deployment
+## Despliegue
+
 For the deployment, we have several options. The first and more flexible is to deploy to a virtual machine using SSH. This will work with any cloud service (or with our own server). Other options include using the container services that all the cloud services provide. This means, deploying our Docker containers directly. Here I am going to use the first approach. I am going to create a virtual machine in a cloud service and after installing docker and docker-compose, deploy our containers there using GitHub Actions and SSH.
 
 ### Create the virtual machine [Option 1 - Microsoft Azure]For this example, I am going to create a virtual machine in Azure. Other services like Amazon AWS or Google Cloud, work in the same way.
@@ -195,11 +203,11 @@ Now we are going to create a new docker-compose file called docker-compose-deplo
 version: '3.5'
 services:
   restapi:
-    image: ghcr.io/arquisoft/lomap_0/restapi:latest
+    image: ghcr.io/arquisoft/lomap_es2a/restapi:latest
     ports:
       - "5000:5000"
   webapp:
-    image: ghcr.io/arquisoft/lomap_0/webapp:latest
+    image: ghcr.io/arquisoft/lomap_es2a/webapp:latest
     ports:
       - "3000:3000"
     depends_on: 
