@@ -1,33 +1,26 @@
 [[section-introduction-and-goals]]
-== Introduction and Goals
+== Introducción y objetivos
 
-[role="arc42help"]
+
 ****
-Describes the relevant requirements and the driving forces that software architects and development team must consider. These include
+El ayuntamiento de Bruselas necesita que se desarrolle LoMap, un sistema en el que los usuarios dispongan de mapas personalizados de la ciudad. Esta primera sección se divide en:
 
-* underlying business goals, essential features and functional requirements for the system
-* quality goals for the architecture
-* relevant stakeholders and their expectations
+* Requisitos funcionales/Requirements Overview
+* Objetivos de calidad/Quality Goals
+* Personas interesadas/Stakeholders
 ****
 
-=== Requirements Overview
+=== Requisitos funcionales
 
-[role="arc42help"]
+
 ****
-.Contents
-Short description of the functional requirements, driving forces, extract (or abstract)
-of requirements. Link to (hopefully existing) requirements documents
-(with version number and information where to find it).
-
-.Motivation
-From the point of view of the end users a system is created or modified to
-improve support of a business activity and/or improve the quality.
-
-.Form
-Short textual description, probably in tabular use-case format.
-If requirements documents exist this overview should refer to these documents.
-
-Keep these excerpts as short as possible. Balance readability of this document with potential redundancy w.r.t to requirements documents.
+* Los usuarios serán capaces de mostrar lugares en una ventana tipo mapa.
+* Los usuarios pueden añadir lugares en categorías diferentes.
+* Los usuarios pueden asociar puntuaciones, comentarios y fotos sobre los lugares añadidos.
+* Se podrán gestionar desde la aplicación los accesos a la información que comparten con otros usuarios, como sus amigos o grupos de amigos.
+* La información sobre un lugar almacenada por cada usuario estará descentralizada, almacenándose en el pod de cada usuario. Se podría almacenar alguna información de forma centralizada si es necesario para el rendimiento.
+* El sistema permitirá a los usuarios ver lugares e información sobre dichos lugares tomada de sus amigos.
+* El sistema permitirá filtrar el mapa.
 ****
 
 === Quality Goals
