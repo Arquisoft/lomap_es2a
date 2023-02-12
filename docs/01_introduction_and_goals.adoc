@@ -23,46 +23,26 @@ El ayuntamiento de Bruselas necesita que se desarrolle LoMap, un sistema en el q
 * El sistema permitirá filtrar el mapa.
 ****
 
-=== Quality Goals
+=== Atributos de Calidad
 
-[role="arc42help"]
-****
-.Contents
-The top three (max five) quality goals for the architecture whose fulfillment is of highest importance to the major stakeholders. We really mean quality goals for the architecture. Don't confuse them with project goals. They are not necessarily identical.
-
-.Motivation
-You should know the quality goals of your most important stakeholders, since they will influence fundamental architectural decisions. Make sure to be very concrete about these qualities, avoid buzzwords.
-If you as an architect do not know how the quality of your work will be judged …
-
-.Form
-A table with quality goals and concrete scenarios, ordered by priorities
-****
-
-=== Stakeholders
-
-[role="arc42help"]
-****
-.Contents
-Explicit overview of stakeholders of the system, i.e. all person, roles or organizations that
-
-* should know the architecture
-* have to be convinced of the architecture
-* have to work with the architecture or with code
-* need the documentation of the architecture for their work
-* have to come up with decisions about the system or its development
-
-.Motivation
-You should know all parties involved in development of the system or affected by the system.
-Otherwise, you may get nasty surprises later in the development process.
-These stakeholders determine the extent and the level of detail of your work and its results.
-
-.Form
-Table with role names, person names, and their expectations with respect to the architecture and its documentation.
-****
 
 [options="header",cols="1,2,2"]
 |===
-|Role/Name|Contact|Expectations
-| _<Role-1>_ | _<Contact-1>_ | _<Expectation-1>_
-| _<Role-2>_ | _<Contact-2>_ | _<Expectation-2>_
+|Prioridad | Atributo de Calidad | Motivación
+|1| Usabilidad | Todos los usuarios deber poder usar la aplicación, ya sean personas con conocimiento de la misma o no.
+|2| Privacidad | La información de cada usuario solo podrá ser vista por dicho usuario (exceptuando datos compartidos por él mismo).
+|3| Eficiencia | Las respuestas de la aplicación deben de darse en un tiempo de respuesta adecuado.
+|4| Integridad | Los datos que se muestren deben de ser los reales en todo momento.
+|5| Interoperabilidad | La aplicación debe poder comunicarse con los datos que se extraigan del resto de aplicaciones.
+|===
+
+=== Stakeholders
+
+
+[options="header",cols="1,2,2"]
+|===
+| Rol | Contacto con la Aplicación | Expectativas
+| Clientes | Usan la aplicación directamente. Interactúan con los mapas direrctamente de varias maneras. | Esperan poder utilizar la aplicación sin muchas complicaciones, utilizando mapas que le sean familiares, con fluidez de cargas y sin que sus datos privados se vean comprometidos.
+| Establecimientos | Utilizan la aplicación indirectamente al aparecer el negocio en ella y directamente si la usan para crear su propio pod. | Esperan que los datos de su establecimiento sean correctos y poder compartir con sus clientes lo que deseen.
+| Desarrolladores | Son los creadores de la aplicación y los que se encargarán de su actualización. | Deben desarrollar la aplicación completa y trabajar en grupo para conseguirlo.
 |===
