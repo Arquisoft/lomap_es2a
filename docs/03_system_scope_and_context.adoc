@@ -8,10 +8,10 @@
 image:DiagramaContextoNegocio.png["Diagrama Negocio"]
 
 El sistema preverá al usuario un mapa con el que podrá interactuar añadiendo lugares los cuales se les podrá añadir información adicional, además se usan pods para almacenar los datos personales para dar más privacidad al usuario siguiendo los principios SOLID. También se dispondrá de una base de datos para información general.
-•	Cliente: es la persona que crear y visualiza marcadores en el mapa.
-•	LoMap: muestra al usuario la interfaz para poder interactuar con él.
-•	Pod permita almacenar datos de forma descentralizada aportando seguridad. 
-•	BBDD se encarga de almacenar datos genéricos.
+*	Cliente: es la persona que crear y visualiza marcadores en el mapa.
+*	LoMap: muestra al usuario la interfaz para poder interactuar con él.
+*	Pod permita almacenar datos de forma descentralizada aportando seguridad. 
+*	BBDD se encarga de almacenar datos genéricos.
 
 
 
@@ -26,8 +26,8 @@ La aplicación usara la tecnología de SOLID que permite que el proyecto sea des
 [options="header",cols="1,2"]
 |===
 |Tecnologia|Descripción
-| _React_ | _Biblioteca de JavaScript creada para facilitar el desarrollo del frontend de aplicaciones , esta tecnología es mantenida por facebook._ 
-| _TypeScript_ | _Lenguaje de programación derivado de JavaScript que permite el tipado estático, este es libre y de código abierto desarrollado y mantenido por Microsoft. _ 
-| _SOLID_ | _Especificación que permite al usuario almacenar sus datos de forma descentralizada en los pods. _ 
-| _Node_ | _Node es un entorno de ejecución de backend para JavaScript. _ 
+| React | Biblioteca de JavaScript creada para facilitar el desarrollo del frontend de aplicaciones , esta tecnología es mantenida por facebook.
+| TypeScript | Lenguaje de programación derivado de JavaScript que permite el tipado estático, este es libre y de código abierto desarrollado y mantenido por Microsoft.  
+| SOLID | Especificación que permite al usuario almacenar sus datos de forma descentralizada en los pods. 
+| Node | Node es un entorno de ejecución de backend para JavaScript. 
 |===
