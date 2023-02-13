@@ -442,14 +442,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#section-introduction-and-goals">1. Introduction and Goals</a>
+<li><a href="#section-introduction-and-goals">1. Introducción y objetivos</a>
 <ul class="sectlevel2">
-<li><a href="#_requirements_overview">1.1. Requirements Overview</a></li>
-<li><a href="#_quality_goals">1.2. Quality Goals</a></li>
+<li><a href="#_requisitos_funcionales">1.1. Requisitos funcionales</a></li>
+<li><a href="#_atributos_de_calidad">1.2. Atributos de Calidad</a></li>
 <li><a href="#_stakeholders">1.3. Stakeholders</a></li>
 </ul>
 </li>
-<li><a href="#section-architecture-constraints">2. Architecture Constraints</a></li>
+<li><a href="#section-architecture-constraints">2. Restricciones de la Arquitectura</a>
+<ul class="sectlevel2">
+<li><a href="#_restricciones_técnicas">2.1. Restricciones técnicas</a></li>
+</ul>
+</li>
 <li><a href="#section-system-scope-and-context">3. System Scope and Context</a>
 <ul class="sectlevel2">
 <li><a href="#_business_context">3.1. Business Context</a></li>
@@ -534,113 +538,62 @@ For documentation of your own system you use better the <em>plain</em> version.<
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-introduction-and-goals">1. Introduction and Goals</h2>
+<h2 id="section-introduction-and-goals">1. Introducción y objetivos</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
+<div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Describes the relevant requirements and the driving forces that software architects and development team must consider. These include</p>
+<p>El ayuntamiento de Bruselas necesita que se desarrolle LoMap, un sistema en el que los usuarios dispongan de mapas personalizados de la ciudad. Esta primera sección se divide en:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>underlying business goals, essential features and functional requirements for the system</p>
+<p>Requisitos funcionales/Requirements Overview</p>
 </li>
 <li>
-<p>quality goals for the architecture</p>
+<p>Objetivos de calidad/Quality Goals</p>
 </li>
 <li>
-<p>relevant stakeholders and their expectations</p>
+<p>Personas interesadas/Stakeholders</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_requirements_overview">1.1. Requirements Overview</h3>
-<div class="sidebarblock arc42help">
+<h3 id="_requisitos_funcionales">1.1. Requisitos funcionales</h3>
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Short description of the functional requirements, driving forces, extract (or abstract)
-of requirements. Link to (hopefully existing) requirements documents
-(with version number and information where to find it).</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>From the point of view of the end users a system is created or modified to
-improve support of a business activity and/or improve the quality.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Short textual description, probably in tabular use-case format.
-If requirements documents exist this overview should refer to these documents.</p>
-</div>
-<div class="paragraph">
-<p>Keep these excerpts as short as possible. Balance readability of this document with potential redundancy w.r.t to requirements documents.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_quality_goals">1.2. Quality Goals</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>The top three (max five) quality goals for the architecture whose fulfillment is of highest importance to the major stakeholders. We really mean quality goals for the architecture. Don&#8217;t confuse them with project goals. They are not necessarily identical.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>You should know the quality goals of your most important stakeholders, since they will influence fundamental architectural decisions. Make sure to be very concrete about these qualities, avoid buzzwords.
-If you as an architect do not know how the quality of your work will be judged …</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>A table with quality goals and concrete scenarios, ordered by priorities</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stakeholders">1.3. Stakeholders</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Explicit overview of stakeholders of the system, i.e. all person, roles or organizations that</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>should know the architecture</p>
+<p>Los usuarios serán capaces de mostrar lugares en una ventana tipo mapa.</p>
 </li>
 <li>
-<p>have to be convinced of the architecture</p>
+<p>Los usuarios pueden añadir lugares en categorías diferentes.</p>
 </li>
 <li>
-<p>have to work with the architecture or with code</p>
+<p>Los usuarios pueden asociar puntuaciones, comentarios y fotos sobre los lugares añadidos.</p>
 </li>
 <li>
-<p>need the documentation of the architecture for their work</p>
+<p>Se podrán gestionar desde la aplicación los accesos a la información que comparten con otros usuarios, como sus amigos o grupos de amigos.</p>
 </li>
 <li>
-<p>have to come up with decisions about the system or its development</p>
+<p>La información sobre un lugar almacenada por cada usuario estará descentralizada, almacenándose en el pod de cada usuario. Se podría almacenar alguna información de forma centralizada si es necesario para el rendimiento.</p>
+</li>
+<li>
+<p>El sistema permitirá a los usuarios ver lugares e información sobre dichos lugares tomada de sus amigos.</p>
+</li>
+<li>
+<p>El sistema permitirá filtrar el mapa.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>You should know all parties involved in development of the system or affected by the system.
-Otherwise, you may get nasty surprises later in the development process.
-These stakeholders determine the extent and the level of detail of your work and its results.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Table with role names, person names, and their expectations with respect to the architecture and its documentation.</p>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_atributos_de_calidad">1.2. Atributos de Calidad</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -649,21 +602,70 @@ These stakeholders determine the extent and the level of detail of your work and
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Role/Name</th>
-<th class="tableblock halign-left valign-top">Contact</th>
-<th class="tableblock halign-left valign-top">Expectations</th>
+<th class="tableblock halign-left valign-top">Prioridad</th>
+<th class="tableblock halign-left valign-top">Atributo de Calidad</th>
+<th class="tableblock halign-left valign-top">Motivación</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-1&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usabilidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Todos los usuarios deber poder usar la aplicación, ya sean personas con conocimiento de la misma o no.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Privacidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La información de cada usuario solo podrá ser vista por dicho usuario (exceptuando datos compartidos por él mismo).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eficiencia</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Las respuestas de la aplicación deben de darse en un tiempo de respuesta adecuado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integridad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Los datos que se muestren deben de ser los reales en todo momento.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interoperabilidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La aplicación debe poder comunicarse con los datos que se extraigan del resto de aplicaciones.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_stakeholders">1.3. Stakeholders</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Rol</th>
+<th class="tableblock halign-left valign-top">Contacto con la Aplicación</th>
+<th class="tableblock halign-left valign-top">Expectativas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clientes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usan la aplicación directamente. Interactúan con los mapas direrctamente de varias maneras.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Esperan poder utilizar la aplicación sin muchas complicaciones, utilizando mapas que le sean familiares, con fluidez de cargas y sin que sus datos privados se vean comprometidos.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Establecimientos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utilizan la aplicación indirectamente al aparecer el negocio en ella y directamente si la usan para crear su propio pod.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Esperan que los datos de su establecimiento sean correctos y poder compartir con sus clientes lo que deseen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desarrolladores</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Son los creadores de la aplicación y los que se encargarán de su actualización.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deben desarrollar la aplicación completa y trabajar en grupo para conseguirlo.</p></td>
 </tr>
 </tbody>
 </table>
@@ -672,29 +674,63 @@ These stakeholders determine the extent and the level of detail of your work and
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-architecture-constraints">2. Architecture Constraints</h2>
+<h2 id="section-architecture-constraints">2. Restricciones de la Arquitectura</h2>
 <div class="sectionbody">
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="paragraph">
 <div class="title">Contents</div>
-<p>Any requirement that constrains software architects in their freedom of design and implementation decisions or decision about the development process. These constraints sometimes go beyond individual systems and are valid for whole organizations and companies.</p>
+<p>Las restriciciones son cualquier requisito que restrinja a los arquitectos del software, a la hora de tomar decisiones, en su libertad de diseño, toma de decisiones sobre la implementación o sobre el proceso del desarrollo.</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_restricciones_técnicas">2.1. Restricciones técnicas</h3>
+<div class="sidebarblock arc42help">
+<div class="content">
 <div class="paragraph">
-<div class="title">Motivation</div>
-<p>Architects should know exactly where they are free in their design decisions and where they must adhere to constraints.
-Constraints must always be dealt with; they may be negotiable, though.</p>
+<div class="title">Contents</div>
+<p>Las restricciones técnicas que seguirá el equipo a lo largo del desarrollo.</p>
 </div>
 <div class="paragraph">
 <div class="title">Form</div>
-<p>Simple tables of constraints with explanations.
-If needed you can subdivide them into
-technical constraints, organizational and political constraints and
-conventions (e.g. programming or versioning guidelines, documentation or naming conventions)</p>
+<p>Tabla con las restricciones técnicas junto a una breve descripción.</p>
 </div>
 </div>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Restricciones técnicas</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Restricción</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOLID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOLID permite a los usuarios guardar sus datos de forma segura y descentralizada, en unos almacenes llamados Pods.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TypeScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emplearemos TypeScript, un lenguaje de programación tipado basado en JavaScript.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Git</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">El código de la aplicación será guardado, compartido y contará con un control de versiones gracias a un repositorio remoto en GitHub.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">React</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">React será empleado para la implementación del Frontend de la aplicación.</p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1740,7 +1776,7 @@ Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-05 21:23:47 +0100
+Last updated 2023-01-30 14:17:02 +0100
 </div>
 </div>
 </body>
