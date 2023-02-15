@@ -1,24 +1,21 @@
 [[section-solution-strategy]]
-== Solution Strategy
+== Estrategia de solución
+=== Decisiones tecnológicas
+Para la realización de LoMap hemos decidido usar las siguientes tecnologías ya que se ajustan a las necesidades del desarrollo : 
 
+* Node js como entorno de ejecución para el backend con ayuda del framework de Expres js . 
+* React para la creación del frontend.  
+* El lenguaje elegido es typeScript ya que nos permite trabajar con tipos estáticos. 
+* La base de datos que usaremos todavía no la tenemos clara a esta altura del desarrollo. 
+* Para el control de versiones usaremos github. 
+* Además, usaremos una api externa que nos proveerá el mapa la cual no se ha decidido todavía. 
 
-[role="arc42help"]
-****
-.Contents
-A short summary and explanation of the fundamental decisions and solution strategies, that shape the system's architecture. These include
+=== Decisiones acerca de la descomposición a alto nivel
 
-* technology decisions
-* decisions about the top-level decomposition of the system, e.g. usage of an architectural pattern or design pattern
-* decisions on how to achieve key quality goals
-* relevant organizational decisions, e.g. selecting a development process or delegating certain tasks to third parties.
+El patron que se usara para el desarrollo sera MVC ya que nos permite tener una estructura en el codigo más entendible , ademas de sparar la logica y la interfaz.
 
-.Motivation
-These decisions form the cornerstones for your architecture. They are the basis for many other detailed decisions or implementation rules.
+=== Decisiones en como alcanzar metas de calidad claves
+Para conseguir la privacidad que deseamos usaremos pods para que cada usuario almacene en estos su información propia evitando así que los datos sensibles se almacenen en una base de datos, ara la eficiencia hemos decidido usar React lo que nos permite que se rendericen las cosas que cambian, y finalmente para la interoperabilidad se está intentado llegar a un consenso con otros equipos para conseguir una estructura parecida para almacenar en los pods y una  restapi que devuelva lo mismo . 
 
-.Form
-Keep the explanation of these key decisions short.
-
-Motivate what you have decided and why you decided that way,
-based upon your problem statement, the quality goals and key constraints.
-Refer to details in the following sections.
-****
+=== Decisiones organizacionales
+El equipo se reunirá un minio de 1 hora semanal de la cual se hará un acta donde quedará reflejada esta reunión, además contamos de un grupo de WhatsApp donde si se toma una decisión importante quedará reflejada en el github, además para el control del trabajo realizado se usarán las issues de gitHub junto con el Kamban reflejando así todas las decisiones en el github . 

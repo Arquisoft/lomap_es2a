@@ -1,5 +1,5 @@
 [[section-runtime-view]]
-== Runtime View
+== Vista de Ejecución 
 
 
 [role="arc42help"]
@@ -30,7 +30,7 @@ There are many notations for describing scenarios, e.g.
 
 ****
 
-=== <Runtime Scenario 1>
+=== Escenario de ejecucion 1
 
 
 * _<insert runtime diagram or textual description of the scenario>_
