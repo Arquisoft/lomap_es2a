@@ -1,31 +1,11 @@
 [[section-glossary]]
-== Glossary
-
-
-
-[role="arc42help"]
-****
-.Contents
-The most important domain and technical terms that your stakeholders use when discussing the system.
-
-You can also see the glossary as source for translations if you work in multi-language teams.
-
-.Motivation
-You should clearly define your terms, so that all stakeholders
-
-* have an identical understanding of these terms
-* do not use synonyms and homonyms
-
-.Form
-A table with columns <Term> and <Definition>.
-
-Potentially more columns in case you need translations.
-
-****
-
+== Glosario
 [options="header"]
 |===
-| Term         | Definition
-| <Term-1>     | <definition-1>
-| <Term-2>     | <definition-2>
+| Término         | Definición
+| SOLID    | Proyecto de descentralización de datos en la web que permiten al usuario final decidir dónde se van a almacenar sus datos, mejorando así la privacidad.
+| POD     | Servidor web personal para que cada usuario guarde sus datos y controle su acceso. Ayudan a seguir los principios SOLID.
+| Node.js   | Entorno de desarrollo para JavaScript que permite establecer varias conexiones a la vez.
+| TypeScript  | Lenguaje que añade tipos estáticos al lenguaje JavaScript.
+| React   | Librería de JavaScript para crear interfaces de usuario
 |===
