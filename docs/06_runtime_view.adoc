@@ -19,6 +19,7 @@ Usuario -> Webapp: Muestra un mensaje
 
 ----
 === Escenario de ejecución 2. Registro de nuevo usuario
+----
 actor Usuario
 entity Webapp
 entity Restapi
@@ -30,8 +31,9 @@ Restapi <- POD: Extrae datos del usuario
 Restapi <- BBDD: Recibe datos necesarios
 Webapp <- Restapi: Devuelve localizaciones
 Usuario -> Webapp: Muestra localizaciones
+----
 === Escenario de ejecución 3. Usuario visualiza una de sus localizaciones.
-
+----
 actor Usuario
 entity Webapp
 entity Restapi
@@ -45,3 +47,4 @@ Restapi <- POD: Devuelve los datos
 Restapi <- BBDD: Devuelve los datos
 Webapp <- Restapi: Devuelve la información
 Usuario -> Webapp: Muestra la información
+----
