@@ -3,9 +3,18 @@
 
 == Vista de Bloques
 
+
 === Sistema General de Caja Blanca
+El diagrama del sistema general muestra una descripción general del sistema con los componentes básicos.
+image:SistemaGeneral.png["Diagrama caja negra"]
 
-====  Caja Nesgra
+=== Nivel 1
+La caja blanca consta de los componentes más genéricos del sistema como la caja negra , el usuario , los pods y la base de datos. EL usuario interactúa con su pod y con LoMap insertando su pod en la aplicación para iniciar sesión y poder sus localizaciones, a su ves la aplicación esta en contacto con el pod y la base de datos que son formas de mantener la persistencia.
+image:CajaNegra.png["Diagrama caja blanca"]
 
-===  Sistema Epecífico de Caja Blanca
+
+=== Nivel 2
+En este nivel disponemos de la informacion sobre lo que hay dentro de la caja negra.En este nivel disponemos de la información sobre lo que hay dentro de la caja negra. Aquí podemos observar las distintas partes del programa y como interactúan entre ellas , el frontend/interfaz es la parte con la que la aplicación se comunica con el usuario permitiendo visualizar el mapa, mientras que el backend se encarga de de ejecutar la lógica del programa e interactuar con la base de datos y el pod.
+image:CajaBlanca.png["Diagrama caja negra"]
+
 
