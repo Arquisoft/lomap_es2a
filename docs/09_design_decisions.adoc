@@ -11,3 +11,4 @@
 | *MongoDB* | Es una de las BBDD no relacionales integradas con TypeScript más habituales y más documentadas. | No soporta transacciones y gasta muchos recursos de memoria.
 
 | *Node.js* | Es una tecnología muy utilizada actualmente, que facilita en gran medida la generación de código en el backend. Además, es una tecnología que veremos en otra asignatura en las próximas semanas, por lo que facilitará bastante la curva de aprendizaje. | Como viene siendo habitual, no hemos trabajado nunca con ella.
+|===
