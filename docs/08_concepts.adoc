@@ -1,8 +1,6 @@
 [[section-concepts]]
 == Conceptos Transversales
 
-
-[role="arc42help"]
 === Modelo de Dominio 
 image:ModeloDatos.png["Modelo del dominio"]
 
