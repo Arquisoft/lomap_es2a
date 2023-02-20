@@ -25,3 +25,4 @@ Mapeo de Bloques de Construcción para la Infraestructura::
 | RestAPI | El backend de la aplicación. Será desplegado en un servidor en la nube.
 | MongoDB | La base de datos que se usará para almacenar los datos comunes que no se puedan almacenar en el pod de cada usuario.
 | Maps API | Será la API que nos proporcionará un mapa y ubicaciones en él.
+|===
