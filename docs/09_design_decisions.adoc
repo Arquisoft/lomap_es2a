@@ -1,26 +1,13 @@
 [[section-design-decisions]]
-== Design Decisions
+== Decisiones de Diseño
 
+[options="header",cols="1,2,2"]
+|===
+|Decisión Arquitectónica | Ventajas | Desventajas
+| *TypeScript* | Consideramos que es un lenguaje más potente incluso que JavaScript, arreglando uno de los mayores problemas de este como es el tipado dinámico. Además, es el lenguaje heredado del proyecto inicial, por lo que nos aporta confianza a la hora de tener que resolver problemas con el profesor. | No tenemos demasiada experiencia con este lenguaje, por no decir ninguna. Tampoco somos demasiado expertos en JavaScript
 
-[role="arc42help"]
-****
-.Contents
-Important, expensive, large scale or risky architecture decisions including rationals.
-With "decisions" we mean selecting one alternative based on given criteria.
+| *React.js* | Ayuda a simplificar el desarrollo del Frontend. Además tiene una amplia documentación, y también es la recomendación de los profesores. | Como en el caso anterior, tampoco somos muy experimentados en el lenguaje.
 
-Please use your judgement to decide whether an architectural decision should be documented
-here in this central section or whether you better document it locally
-(e.g. within the white box template of one building block).
+| *MongoDB* | Es una de las BBDD no relacionales integradas con TypeScript más habituales y más documentadas. | No soporta transacciones y gasta muchos recursos de memoria.
 
-Avoid redundancy. Refer to section 4, where you already captured the most important decisions of your architecture.
-
-.Motivation
-Stakeholders of your system should be able to comprehend and retrace your decisions.
-
-.Form
-Various options:
-
-* List or table, ordered by importance and consequences or:
-* more detailed in form of separate sections per decision
-* ADR (architecture decision record) for every important decision
-****
+| *Node.js* | Es una tecnología muy utilizada actualmente, que facilita en gran medida la generación de código en el backend. Además, es una tecnología que veremos en otra asignatura en las próximas semanas, por lo que facilitará bastante la curva de aprendizaje. | Como viene siendo habitual, no hemos trabajado nunca con ella.

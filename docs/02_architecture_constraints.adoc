@@ -1,10 +1,12 @@
 [[section-architecture-constraints]]
-== Architecture Constraints
+== Restricciones de la Arquitectura
 
 
 [role="arc42help"]
 ****
 .Contents
+Las restriciciones son cualquier requisito que restrinja a los arquitectos del software, a la hora de tomar decisiones, en su libertad de diseño, toma de decisiones sobre la implementación o sobre el proceso del desarrollo.
+////
 Any requirement that constrains software architects in their freedom of design and implementation decisions or decision about the development process. These constraints sometimes go beyond individual systems and are valid for whole organizations and companies.
 
 .Motivation
@@ -16,4 +18,24 @@ Simple tables of constraints with explanations.
 If needed you can subdivide them into
 technical constraints, organizational and political constraints and
 conventions (e.g. programming or versioning guidelines, documentation or naming conventions)
+////
 ****
+
+=== Restricciones técnicas
+[role="arc42help"]
+****
+.Contents
+Las restricciones técnicas que seguirá el equipo a lo largo del desarrollo.
+
+.Form
+Tabla con las restricciones técnicas junto a una breve descripción.
+****
+.Restricciones técnicas
+[options="header",cols="1,2"]
+|===
+|Restricción|Descripción
+|SOLID| SOLID permite a los usuarios guardar sus datos de forma segura y descentralizada, en unos almacenes llamados Pods.
+|TypeScript| Emplearemos TypeScript, un lenguaje de programación tipado basado en JavaScript. 
+|Git| El código de la aplicación será guardado, compartido y contará con un control de versiones gracias a un repositorio remoto en GitHub.
+|React| React será empleado para la implementación del Frontend de la aplicación.
+|===
