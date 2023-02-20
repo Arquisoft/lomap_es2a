@@ -880,39 +880,17 @@ For documentation of your own system you use better the <em>plain</em> version.<
 </div>
 <div class="sect2">
 <h3 id="_escenario_de_ejecución_2_registro_de_nuevo_usuario">6.2. Escenario de ejecución 2. Registro de nuevo usuario</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>actor Usuario
-entity Webapp
-entity Restapi
-database POD
-database BBDD
-Usuario -&gt; Webapp: Introduce su pod
-Webapp -&gt; Restapi: envía el pod
-Restapi &lt;- POD: Extrae datos del usuario
-Restapi &lt;- BBDD: Recibe datos necesarios
-Webapp &lt;- Restapi: Devuelve localizaciones
-Usuario -&gt; Webapp: Muestra localizaciones</pre>
+<img src="./images/Sequence%20diagram1.png" alt="Sequence diagram1" width="598" height="365">
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_escenario_de_ejecución_3_usuario_visualiza_una_de_sus_localizaciones">6.3. Escenario de ejecución 3. Usuario visualiza una de sus localizaciones.</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>actor Usuario
-entity Webapp
-entity Restapi
-database POD
-database BBDD
-Usuario -&gt; Webapp: Selecciona la localización
-Webapp -&gt; Restapi: Pide la información
-Restapi -&gt; POD: Busca datos de la localización
-Restapi -&gt; BBDD: Busca datos de la localización
-Restapi &lt;- POD: Devuelve los datos
-Restapi &lt;- BBDD: Devuelve los datos
-Webapp &lt;- Restapi: Devuelve la información
-Usuario -&gt; Webapp: Muestra la información</pre>
+<img src="./images/Sequence%20diagram2.png" alt="Sequence diagram2" width="649" height="426">
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -922,7 +900,7 @@ Usuario -&gt; Webapp: Muestra la información</pre>
 <div class="sect1">
 <h2 id="section-deployment-view">7. Vista de Despliegue</h2>
 <div class="sectionbody">
-<div class="sect2 arc42help">
+<div class="sect2">
 <h3 id="_infraestructura_nivel_1">7.1. Infraestructura Nivel 1</h3>
 <div class="paragraph">
 <p><span class="image"><img src="./images/VistaDespliegue.png" alt="Diagrama Tecnico"></span></p>
@@ -978,8 +956,7 @@ Usuario -&gt; Webapp: Muestra la información</pre>
 <p class="tableblock">&lt;&lt;&lt;&lt;
 <a id="section-concepts"></a>
 == Conceptos Transversales</p>
-<p class="tableblock">[role="arc42help"]
-=== Modelo de Dominio
+<p class="tableblock">=== Modelo de Dominio
 <span class="image"><img src="./images/ModeloDatos.png" alt="Modelo del dominio"></span></p>
 <p class="tableblock">=== Seguridad
 Uno de los pilares del desarrollo de aplicaciones web es la seguridad. Los datos de los usuarios son muy importantes, y deben permanecer confidenciales y utilizarse lo mínimo posible. Por ello, se almacenará la mínima cantidad de datos posibles en una base de datos, guardando todo lo posible en el POD de cada uno de ellos. Además, esto asegura que todos los usuarios estén verificados.</p>
@@ -988,7 +965,6 @@ Uno de los pilares del desarrollo de aplicaciones web es la seguridad. Los datos
 <p class="tableblock">&lt;&lt;&lt;&lt;
 <a id="section-design-decisions"></a>
 == Decisiones de Diseño</p>
-<p class="tableblock">[role="arc42help"]</p>
 <p class="tableblock">[options="header",cols="1,2,2"]</p></td>
 </tr>
 </tbody>
@@ -1017,7 +993,7 @@ Uno de los pilares del desarrollo de aplicaciones web es la seguridad. Los datos
 <h3 id="_árbol_de_calidad">8.1. Árbol de calidad</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/arbol_calidad.PNG" alt="arbol calidad">
+<img src="./images/arbol_calidad.png" alt="arbol calidad">
 </div>
 </div>
 </div>
