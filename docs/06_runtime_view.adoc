@@ -19,6 +19,7 @@ Usuario -> Webapp: Muestra un mensaje
 
 ----
 === Escenario de ejecución 2. Registro de nuevo usuario
+[plantuml,"Sequence diagram1",png]
 ----
 actor Usuario
 entity Webapp
@@ -33,6 +34,7 @@ Webapp <- Restapi: Devuelve localizaciones
 Usuario -> Webapp: Muestra localizaciones
 ----
 === Escenario de ejecución 3. Usuario visualiza una de sus localizaciones.
+[plantuml,"Sequence diagram2",png]
 ----
 actor Usuario
 entity Webapp
