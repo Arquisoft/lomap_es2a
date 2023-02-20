@@ -495,6 +495,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#section-design-decisions">9. Decisiones de Diseño</a></li>
+<li><a href="#section-quality-scenarios">10. Requisitos de calidad</a>
+<ul class="sectlevel2">
+<li><a href="#_árbol_de_calidad">10.1. Árbol de calidad</a></li>
+<li><a href="#_escenarios_de_calidad">10.2. Escenarios de calidad</a></li>
+</ul>
+</li>
+<li><a href="#section-technical-risks">11. Riesgos y deuda técnica</a></li>
+<li><a href="#section-glossary">12. Glosario</a></li>
 </ul>
 </div>
 </div>
@@ -1019,77 +1027,141 @@ For documentation of your own system you use better the <em>plain</em> version.<
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Node.js</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Es una tecnología muy utilizada actualmente, que facilita en gran medida la generación de código en el backend. Además, es una tecnología que veremos en otra asignatura en las próximas semanas, por lo que facilitará bastante la curva de aprendizaje.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Como viene siendo habitual, no hemos trabajado nunca con ella.</p>
-<p class="tableblock">&lt;&lt;&lt;&lt;
-<a id="section-quality-scenarios"></a>
-== Requisitos de calidad</p>
-<p class="tableblock">=== Árbol de calidad
-:imagesdir: images/
-image::arbol_calidad.png[]
-=== Escenarios de calidad
-[options="header",cols="1,2"]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Como viene siendo habitual, no hemos trabajado nunca con ella.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>|Atributo de calidad | Escenario de calidad
-|Usabilidad | Al iniciar la aplicación por primera vez, el usuario debe poder entender cómo usarla en menos de 10 minutos.
-|Privacidad | Cuando un usuario intente acceder a los datos privados de otra persona, el sistema debe prohibirle el acceso.
-|Eficiencia | Las respuestas de la aplicación deben darse en menos de 10 segundos en circunstancias normales.
-|Integridad | Cuando usuarios sin registro en la aplicación intenten modificar datos, el sistema deberá negarles la operación.
-|Interoperabilidad | Cuando otra aplicación LoMap quiera compartir datos con el sistema, este tiene que responder correctamente.</p>
+<div style="page-break-after: always;"></div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="section-quality-scenarios">10. Requisitos de calidad</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_árbol_de_calidad">10.1. Árbol de calidad</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/arbol_calidad.png" alt="arbol calidad">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_escenarios_de_calidad">10.2. Escenarios de calidad</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Atributo de calidad</th>
+<th class="tableblock halign-left valign-top">Escenario de calidad</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&lt;&lt;
-<a id="section-technical-risks"></a>
-== Riesgos y deuda técnica
-<strong><strong>*
-* Carecemos de experiencia en las tecnologías a usar. Deberemos aprenderlas de forma paralela al desarrollo del proyecto.
-* Algún miembro podría abandonar la asignatura. No asignaremos a sólo un miembro la totalidad de una tarea crítica, como por ejemplo crear la interfaz.
-</strong></strong>*</p>
-<p class="tableblock">&lt;&lt;&lt;&lt;
-<a id="section-glossary"></a>
-== Glosario
-[options="header"]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usabilidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Al iniciar la aplicación por primera vez, el usuario debe poder entender cómo usarla en menos de 10 minutos.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Privacidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cuando un usuario intente acceder a los datos privados de otra persona, el sistema debe prohibirle el acceso.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eficiencia</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Las respuestas de la aplicación deben darse en menos de 10 segundos en circunstancias normales.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integridad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cuando usuarios sin registro en la aplicación intenten modificar datos, el sistema deberá negarles la operación.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interoperabilidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cuando otra aplicación LoMap quiera compartir datos con el sistema, este tiene que responder correctamente.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>| Término         | Definición
-| SOLID    | Proyecto de descentralización de datos en la web que permiten al usuario final decidir dónde se van a almacenar sus datos, mejorando así la privacidad.
-| POD     | Servidor web personal para que cada usuario guarde sus datos y controle su acceso. Ayudan a seguir los principios SOLID.
-| Node.js   | Entorno de desarrollo para JavaScript que permite establecer varias conexiones a la vez.
-| TypeScript  | Lenguaje que añade tipos estáticos al lenguaje JavaScript.
-| React   | Librería de JavaScript para crear interfaces de usuario</p>
+<div style="page-break-after: always;"></div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-technical-risks">11. Riesgos y deuda técnica</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Carecemos de experiencia en las tecnologías a usar. Deberemos aprenderlas de forma paralela al desarrollo del proyecto.</p>
+</li>
+<li>
+<p>Algún miembro podría abandonar la asignatura. No asignaremos a sólo un miembro la totalidad de una tarea crítica, como por ejemplo crear la interfaz.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-glossary">12. Glosario</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Término</th>
+<th class="tableblock halign-left valign-top">Definición</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&lt;&lt;
-:homepage: <a href="http://arc42.org" class="bare">http://arc42.org</a></p>
-<p class="tableblock">:keywords: software-architecture, documentation, template, arc42</p>
-<p class="tableblock">:numbered!:
-<strong>About arc42</strong></p>
-<p class="tableblock">[role="lead"]
-arc42, the Template for documentation of
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOLID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proyecto de descentralización de datos en la web que permiten al usuario final decidir dónde se van a almacenar sus datos, mejorando así la privacidad.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Servidor web personal para que cada usuario guarde sus datos y controle su acceso. Ayudan a seguir los principios SOLID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node.js</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entorno de desarrollo para JavaScript que permite establecer varias conexiones a la vez.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TypeScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lenguaje que añade tipos estáticos al lenguaje JavaScript.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">React</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Librería de JavaScript para crear interfaces de usuario</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><strong>About arc42</strong></p>
+</div>
+<div class="paragraph lead">
+<p>arc42, the Template for documentation of
 software and system architecture.</p>
-<p class="tableblock">By Dr. Gernot Starke, Dr. Peter Hruschka and contributors.</p>
-<p class="tableblock">Template Revision: 7.0 EN (based on asciidoc), January 2017</p>
-<p class="tableblock">&#169;
+</div>
+<div class="paragraph">
+<p>By Dr. Gernot Starke, Dr. Peter Hruschka and contributors.</p>
+</div>
+<div class="paragraph">
+<p>Template Revision: 7.0 EN (based on asciidoc), January 2017</p>
+</div>
+<div class="paragraph">
+<p>&#169;
 We acknowledge that this document uses material from the
 arc 42 architecture template, <a href="http://www.arc42.de" class="bare">http://www.arc42.de</a>.
-Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p></td>
-</tr>
-</tbody>
-</table>
+Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
+</div>
 </div>
 </div>
 </div>
