@@ -487,14 +487,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_infraestructura_nivel_1">7.1. Infraestructura Nivel 1</a></li>
 </ul>
 </li>
-<li><a href="#section-quality-scenarios">8. Requisitos de calidad</a>
+<li><a href="#section-concepts">8. Conceptos Transversales</a>
 <ul class="sectlevel2">
-<li><a href="#_árbol_de_calidad">8.1. Árbol de calidad</a></li>
-<li><a href="#_escenarios_de_calidad">8.2. Escenarios de calidad</a></li>
+<li><a href="#_modelo_de_dominio">8.1. Modelo de Dominio</a></li>
+<li><a href="#_seguridad">8.2. Seguridad</a></li>
+<li><a href="#_testeabilidad">8.3. Testeabilidad</a></li>
 </ul>
 </li>
-<li><a href="#section-technical-risks">9. Riesgos y deuda técnica</a></li>
-<li><a href="#section-glossary">10. Glosario</a></li>
+<li><a href="#section-design-decisions">9. Decisiones de Diseño</a></li>
 </ul>
 </div>
 </div>
@@ -952,168 +952,144 @@ For documentation of your own system you use better the <em>plain</em> version.<
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maps API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Será la API que nos proporcionará un mapa y ubicaciones en él.</p>
-<p class="tableblock">&lt;&lt;&lt;&lt;
-<a id="section-concepts"></a>
-== Conceptos Transversales</p>
-<p class="tableblock">=== Modelo de Dominio
-<span class="image"><img src="./images/ModeloDatos.png" alt="Modelo del dominio"></span></p>
-<p class="tableblock">=== Seguridad
-Uno de los pilares del desarrollo de aplicaciones web es la seguridad. Los datos de los usuarios son muy importantes, y deben permanecer confidenciales y utilizarse lo mínimo posible. Por ello, se almacenará la mínima cantidad de datos posibles en una base de datos, guardando todo lo posible en el POD de cada uno de ellos. Además, esto asegura que todos los usuarios estén verificados.</p>
-<p class="tableblock">=== Testeabilidad</p>
-<p class="tableblock">Otro buen hábito fundamental es probar el software desarrollado. Por ello, se crearán tests unitarios con la finalidad de escanear todos los posibles errores antes de que se produzcan en una versión realease.</p>
-<p class="tableblock">&lt;&lt;&lt;&lt;
-<a id="section-design-decisions"></a>
-== Decisiones de Diseño</p>
-<p class="tableblock">[options="header",cols="1,2,2"]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Será la API que nos proporcionará un mapa y ubicaciones en él.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>|Decisión Arquitectónica | Ventajas | Desventajas
-| <strong>TypeScript</strong> | Consideramos que es un lenguaje más potente incluso que JavaScript, arreglando uno de los mayores problemas de este como es el tipado dinámico. Además, es el lenguaje heredado del proyecto inicial, por lo que nos aporta confianza a la hora de tener que resolver problemas con el profesor. | No tenemos demasiada experiencia con este lenguaje, por no decir ninguna. Tampoco somos demasiado expertos en JavaScript</p>
+<div style="page-break-after: always;"></div>
 </div>
-<div class="paragraph">
-<p>| <strong>React.js</strong> | Ayuda a simplificar el desarrollo del Frontend. Además tiene una amplia documentación, y también es la recomendación de los profesores. | Como en el caso anterior, tampoco somos muy experimentados en el lenguaje.</p>
 </div>
-<div class="paragraph">
-<p>| <strong>MongoDB</strong> | Es una de las BBDD no relacionales integradas con TypeScript más habituales y más documentadas. | No soporta transacciones y gasta muchos recursos de memoria.</p>
 </div>
+<div class="sect1">
+<h2 id="section-concepts">8. Conceptos Transversales</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_modelo_de_dominio">8.1. Modelo de Dominio</h3>
 <div class="paragraph">
-<p>| <strong>Node.js</strong> | Es una tecnología muy utilizada actualmente, que facilita en gran medida la generación de código en el backend. Además, es una tecnología que veremos en otra asignatura en las próximas semanas, por lo que facilitará bastante la curva de aprendizaje. | Como viene siendo habitual, no hemos trabajado nunca con ella.</p>
+<p><span class="image"><img src="./images/ModeloDatos.png" alt="Modelo del dominio"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_seguridad">8.2. Seguridad</h3>
+<div class="paragraph">
+<p>Uno de los pilares del desarrollo de aplicaciones web es la seguridad. Los datos de los usuarios son muy importantes, y deben permanecer confidenciales y utilizarse lo mínimo posible. Por ello, se almacenará la mínima cantidad de datos posibles en una base de datos, guardando todo lo posible en el POD de cada uno de ellos. Además, esto asegura que todos los usuarios estén verificados.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testeabilidad">8.3. Testeabilidad</h3>
+<div class="paragraph">
+<p>Otro buen hábito fundamental es probar el software desarrollado. Por ello, se crearán tests unitarios con la finalidad de escanear todos los posibles errores antes de que se produzcan en una versión realease.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-quality-scenarios">8. Requisitos de calidad</h2>
+<h2 id="section-design-decisions">9. Decisiones de Diseño</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_árbol_de_calidad">8.1. Árbol de calidad</h3>
-<div class="imageblock">
-<div class="content">
-<img src="./images/arbol_calidad.png" alt="arbol calidad">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_escenarios_de_calidad">8.2. Escenarios de calidad</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Atributo de calidad</th>
-<th class="tableblock halign-left valign-top">Escenario de calidad</th>
+<th class="tableblock halign-left valign-top">Decisión Arquitectónica</th>
+<th class="tableblock halign-left valign-top">Ventajas</th>
+<th class="tableblock halign-left valign-top">Desventajas</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Usabilidad</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Al iniciar la aplicación por primera vez, el usuario debe poder entender cómo usarla en menos de 10 minutos.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TypeScript</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consideramos que es un lenguaje más potente incluso que JavaScript, arreglando uno de los mayores problemas de este como es el tipado dinámico. Además, es el lenguaje heredado del proyecto inicial, por lo que nos aporta confianza a la hora de tener que resolver problemas con el profesor.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No tenemos demasiada experiencia con este lenguaje, por no decir ninguna. Tampoco somos demasiado expertos en JavaScript</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Privacidad</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cuando un usuario intente acceder a los datos privados de otra persona, el sistema debe prohibirle el acceso.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>React.js</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ayuda a simplificar el desarrollo del Frontend. Además tiene una amplia documentación, y también es la recomendación de los profesores.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Como en el caso anterior, tampoco somos muy experimentados en el lenguaje.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Eficiencia</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Las respuestas de la aplicación deben darse en menos de 10 segundos en circunstancias normales.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MongoDB</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Es una de las BBDD no relacionales integradas con TypeScript más habituales y más documentadas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No soporta transacciones y gasta muchos recursos de memoria.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integridad</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cuando usuarios sin registro en la aplicación intenten modificar datos, el sistema deberá negarles la operación.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interoperabilidad</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cuando otra aplicación LoMap quiera compartir datos con el sistema, este tiene que responder correctamente.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Node.js</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Es una tecnología muy utilizada actualmente, que facilita en gran medida la generación de código en el backend. Además, es una tecnología que veremos en otra asignatura en las próximas semanas, por lo que facilitará bastante la curva de aprendizaje.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Como viene siendo habitual, no hemos trabajado nunca con ella.</p>
+<p class="tableblock">&lt;&lt;&lt;&lt;
+<a id="section-quality-scenarios"></a>
+== Requisitos de calidad</p>
+<p class="tableblock">=== Árbol de calidad
+:imagesdir: images/
+image::arbol_calidad.png[]
+=== Escenarios de calidad
+[options="header",cols="1,2"]</p></td>
 </tr>
 </tbody>
 </table>
-<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>|Atributo de calidad | Escenario de calidad
+|Usabilidad | Al iniciar la aplicación por primera vez, el usuario debe poder entender cómo usarla en menos de 10 minutos.
+|Privacidad | Cuando un usuario intente acceder a los datos privados de otra persona, el sistema debe prohibirle el acceso.
+|Eficiencia | Las respuestas de la aplicación deben darse en menos de 10 segundos en circunstancias normales.
+|Integridad | Cuando usuarios sin registro en la aplicación intenten modificar datos, el sistema deberá negarles la operación.
+|Interoperabilidad | Cuando otra aplicación LoMap quiera compartir datos con el sistema, este tiene que responder correctamente.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-technical-risks">9. Riesgos y deuda técnica</h2>
-<div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Carecemos de experiencia en las tecnologías a usar. Deberemos aprenderlas de forma paralela al desarrollo del proyecto.</p>
-</li>
-<li>
-<p>Algún miembro podría abandonar la asignatura. No asignaremos a sólo un miembro la totalidad de una tarea crítica, como por ejemplo crear la interfaz.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-glossary">10. Glosario</h2>
-<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 100%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Término</th>
-<th class="tableblock halign-left valign-top">Definición</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SOLID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Proyecto de descentralización de datos en la web que permiten al usuario final decidir dónde se van a almacenar sus datos, mejorando así la privacidad.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">POD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Servidor web personal para que cada usuario guarde sus datos y controle su acceso. Ayudan a seguir los principios SOLID.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node.js</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Entorno de desarrollo para JavaScript que permite establecer varias conexiones a la vez.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TypeScript</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Lenguaje que añade tipos estáticos al lenguaje JavaScript.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">React</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Librería de JavaScript para crear interfaces de usuario</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&lt;&lt;
+<a id="section-technical-risks"></a>
+== Riesgos y deuda técnica
+<strong><strong>*
+* Carecemos de experiencia en las tecnologías a usar. Deberemos aprenderlas de forma paralela al desarrollo del proyecto.
+* Algún miembro podría abandonar la asignatura. No asignaremos a sólo un miembro la totalidad de una tarea crítica, como por ejemplo crear la interfaz.
+</strong></strong>*</p>
+<p class="tableblock">&lt;&lt;&lt;&lt;
+<a id="section-glossary"></a>
+== Glosario
+[options="header"]</p></td>
 </tr>
 </tbody>
 </table>
-<div style="page-break-after: always;"></div>
 <div class="paragraph">
-<p><strong>About arc42</strong></p>
+<p>| Término         | Definición
+| SOLID    | Proyecto de descentralización de datos en la web que permiten al usuario final decidir dónde se van a almacenar sus datos, mejorando así la privacidad.
+| POD     | Servidor web personal para que cada usuario guarde sus datos y controle su acceso. Ayudan a seguir los principios SOLID.
+| Node.js   | Entorno de desarrollo para JavaScript que permite establecer varias conexiones a la vez.
+| TypeScript  | Lenguaje que añade tipos estáticos al lenguaje JavaScript.
+| React   | Librería de JavaScript para crear interfaces de usuario</p>
 </div>
-<div class="paragraph lead">
-<p>arc42, the Template for documentation of
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&lt;&lt;
+:homepage: <a href="http://arc42.org" class="bare">http://arc42.org</a></p>
+<p class="tableblock">:keywords: software-architecture, documentation, template, arc42</p>
+<p class="tableblock">:numbered!:
+<strong>About arc42</strong></p>
+<p class="tableblock">[role="lead"]
+arc42, the Template for documentation of
 software and system architecture.</p>
-</div>
-<div class="paragraph">
-<p>By Dr. Gernot Starke, Dr. Peter Hruschka and contributors.</p>
-</div>
-<div class="paragraph">
-<p>Template Revision: 7.0 EN (based on asciidoc), January 2017</p>
-</div>
-<div class="paragraph">
-<p>&#169;
+<p class="tableblock">By Dr. Gernot Starke, Dr. Peter Hruschka and contributors.</p>
+<p class="tableblock">Template Revision: 7.0 EN (based on asciidoc), January 2017</p>
+<p class="tableblock">&#169;
 We acknowledge that this document uses material from the
 arc 42 architecture template, <a href="http://www.arc42.de" class="bare">http://www.arc42.de</a>.
-Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
-</div>
+Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
