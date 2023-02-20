@@ -3,7 +3,7 @@
 
 === Árbol de calidad
 :imagesdir: images/
-image::arbol_calidad.PNG[]
+image::arbol_calidad.png[]
 === Escenarios de calidad
 [options="header",cols="1,2"]
 |===
