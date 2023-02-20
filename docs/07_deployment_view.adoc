@@ -3,7 +3,7 @@
 
 == Vista de Despliegue
 [role="arc42help"]
-
+***
 
 === Infraestructura Nivel 1
 
